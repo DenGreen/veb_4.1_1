@@ -3,12 +3,7 @@ import json from "./parser";
 
 export default class GameSavingLoader {
   static load() {
-    return new Promise((resolve, reject) => {
-     read()
-        .then(json)
-        .then((fulfilled) => {
-          resolve(fulfilled);
-        });
-    });
+    console.log(Promise.resolve().then(read).then(json))
+    return Promise.resolve().then(read).then(json)
   }
 }
